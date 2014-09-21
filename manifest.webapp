@@ -1,0 +1,17 @@
+{
+  "name": "Eco-Life",
+  "description": "Jardin botanico",
+  "launch_path": "/index.html",
+  "icons": {
+    "128": "/img/EcoLife.png"
+  },
+  "permissions": {
+    "browser": {},
+    "embeded-apps": {}
+  },
+  "developer": {
+    "name": "DFQ",
+    "url": "http://dfquintero.com"
+  },
+  "default_locale": "es"
+}
