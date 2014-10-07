@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link href="jquery/jquery.mobile-1.4.4/jquery.mobile.structure-1.4.4.min.css" rel="stylesheet" />
+    <link href="jquery/themes/ecohackaton.min.css" rel="stylesheet" />
+    <link href="jquery/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
     <script src="jquery/jquery-2.1.1.js"></script>
     <script src="jquery/jquery.mobile-1.4.4/jquery.mobile-1.4.4.js"></script>
-    <link href="jquery/jquery.mobile-1.4.4/jquery.mobile-1.4.4.min.css" rel="stylesheet" />
     <title></title>
 </head>
 <body>
-    <div data-role="page" id="login">
+    <div data-role="page" id="login" style="background-color: #c8dd83;">
         <div data-role="content">
             <br />
             <br />
@@ -21,7 +24,7 @@
                 <input name="" id="textinput2" placeholder="Contraseña..." value="" type="password">
             </div>
             <center>
-                <a data-role="button" href="#Consumo" style="width:80%; color:darkgreen; background-color:lightgreen">Entrar</a>
+                <a data-role="button" href="#badges" style="width:80%; color:darkgreen; background-color:lightgreen">Entrar</a>
                 <br />
                 <a href="http://www.facebook.com"><img src="img/login/fb.png" style="width:70%" /></a>
                 <a href="http://www.twitter.com"><img src="img/login/tw.png" style="width:70%" /></a>
@@ -31,314 +34,189 @@
             <h6>© dfquintero.com</h6>
         </div>
     </div>
-    <div data-role="page" id="Consumo">
-        <div data-role="header" data-theme="b">
-            <h1></h1>
-            <a class="ui-btn-left ui-btn ui-icon-bars ui-corner-all ui-btn-icon-notext ui-nodisc-icon " href="#menu1" style="background-color:transparent;">Menu</a>
+    <div data-role="page" id="badges" style="background-image: url(img/30.png); background-repeat: no-repeat; background-position: bottom; background-size: cover; background-color: #c8dd83; ">
+        <div data-role="header" style="overflow:hidden; opacity:0.9; border:hidden" data-position="fixed">
+            <div data-role="navbar" data-iconpos="bottom">
+                <ul>
+                    <li><a href="#badges" data-icon="star" data-transition="flow" class="ui-btn-active" style="background-color:gold"></a></li>
+                    <li><a href="#consumos" data-icon="bars" data-transition="flow" class="ui-alt-icon"></a></li>
+                    <li><a href="#tips" data-icon="grid" data-transition="flow" class="ui-alt-icon"></a></li>
+                    <li><a href="#exit" data-icon="delete" data-rel="popup" data-transition="slidedown" data-position-to="window" style="background-color:red"></a></li>
+                </ul>
+            </div>
         </div>
-        <div data-role="content">
-            <br />
+        <div data-role="popup" id="exit" class="ui-content" data-theme="a">
+            <h4 style="text-align:center">¿Esta Seguro de que desea Salir?</h4>
             <center>
-                <img src="img/EcoConsumos.png" style="width:70%" />
+                <a href="#login" class="ui-btn ui-mini ui-btn-inline" style="width:30%">Salir</a>
+                <a href="#" class="ui-btn ui-mini ui-btn-inline" data-rel="back" style="width:30%">Cancelar</a>
             </center>
-            <br />
-            <p style="text-align:justify">Actualmente tu consumo electrico es ....</p>
-            <br />
-            <ul data-role="listview" data-split-icon="gear" data-split-theme="a" class="ui-alt-icon ui-nodisc-icon">
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-                <li class="ui-icon-audio">
-                    <a href="#">
-                        <img src="img/cons.png" style="margin-left:1px;">
-                        <h1>Titulo</h1>
-                        <p>Descripción</p>
-                        <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Mas</a>
-                    </a>
-                </li>
-            </ul>
-
-            <div data-role="popup" id="purchase" data-theme="a" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
-                <h3>Titulo</h3>
-                <p>Descripción</p>
-                <input name="slider-2" id="slider-2" data-highlight="true" min="0" max="10" value="2" type="range">
-                <center>
-                    <select name="flip-1" id="flip-1" data-role="flipswitch" data-mini="false">
-                        <option value="off">Off</option>
-                        <option value="on">On</option>
-                    </select>
-                </center>
+            <h6 style="text-align:right">Developed by: <a href="http://www.dfquintero.com" data-rel="external">dfquintero</a></h6>
+        </div>
+        <div data-role="content" style="opacity:0.95">
+            <center>
+                <h2 style="text-shadow:1px 1px 5px #ffffff; color:black">Aqui encontraras tus premios por mejorar tus costumbres pulsa sobre uno para ver mas información.</h2>
                 <br />
-
-                <a href="index.php" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-btn-inline ui-mini">Guardar</a>
-                <a href="index.php" data-rel="back" class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini">Cancel</a>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><a href="#b1" data-rel="popup"><img src="img/badges/adventurer.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#b2" data-rel="popup"><img src="img/badges/explorer.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#b3" data-rel="popup"><img src="img/badges/dogsbestfriend.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#b4" data-rel="popup"><img src="img/badges/entourage.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#b5" data-rel="popup"><img src="img/badges/greatoutdoors.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#b6" data-rel="popup"><img src="img/badges/intel_all_ears.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#b7" data-rel="popup"><img src="img/badges/northpole.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#b8" data-rel="popup"><img src="img/badges/runkeeper-warmup.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#b9" data-rel="popup"><img src="img/badges/twtrcon.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-a"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-b"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                    <div class="ui-block-c"><a href="#popgris" data-rel="popup" data-transition="flip" data-position-to="origin"><img src="img/badges/gris.png" style="width:60%" /></a></div>
+                </div>
+            </center>
+            <div data-role="popup" id="popgris" class="ui-content ui" data-theme="a">
+                <p>No Desbloqueado.</p>
+            </div>
+            <div data-role="popup" id="b1" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b2" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b3" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b4" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b5" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b6" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b7" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b8" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
+            </div>
+            <div data-role="popup" id="b9" class="ui-content ui" data-theme="a">
+                <h5>.</h5>
             </div>
         </div>
-        <div data-role="panel" id="menu1" style="background-image: url(img/Eco.png); background-repeat: no-repeat; background-position-y: top; background-position-x: center; background-size: contain">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <ul data-role="listview" class="ui-nodisc-icon ui-alt-icon"  data-theme="a" style="opacity:0.70;">
-                <li data-role="list-divider"></li>
-                <li data-icon="power"><a href="#Consumo"><h1 style="text-align:center; opacity:1;">Consumo</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="star"><a href="#Medallas"><h1 style="text-align:center">Medallas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="info"><a href="#Tips"><h1 style="text-align:center">Tips</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="check"><a href="#Tareas"><h1 style="text-align:center">Tareas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="delete"><a href="#login"><h1 style="text-align:center; color:red">Cerrar</h1></a></li>
-                <li data-role="list-divider"></li>
+    </div>
+    <div data-role="page" id="consumos" style="background-image: url(img/30.png); background-repeat: no-repeat; background-position: bottom; background-size: cover; background-color: #c8dd83;">
+        <div data-role=" header" style="overflow:hidden; opacity:0.9; border:hidden" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#badges" data-icon="star" data-transition="flow" class="ui-alt-icon"></a></li>
+                <li><a href="#consumos" data-icon="bars" data-transition="flow" class="ui-btn-active" style="background-color:gold"></a></li>
+                <li><a href="#tips" data-icon="grid" data-transition="flow" class="ui-alt-icon"></a></li>
+                <li><a href="#exit" data-icon="delete" data-rel="popup" data-transition="slidedown" data-position-to="window" style="background-color:red"></a></li>
             </ul>
         </div>
     </div>
-    <div data-role="page" id="Medallas">
-        <div data-role="header" data-theme="b">
-            <h1></h1>
-            <a class="ui-btn-left ui-btn ui-icon-bars ui-corner-all ui-btn-icon-notext ui-nodisc-icon " href="#menu2" style="background-color:transparent;">Menu</a>
+        <div data-role="popup" id="exit" class="ui-content" data-theme="a">
+            <h4 style="text-align:center">¿Esta Seguro de que desea Salir?</h4>
+            <center>
+                <a href="#login" class="ui-btn ui-mini ui-btn-inline" style="width:30%">Salir</a>
+                <a href="#" class="ui-btn ui-mini ui-btn-inline" data-rel="back" style="width:30%">Cancelar</a>
+            </center>
+            <h6 style="text-align:right">Developed by: <a href="http://www.dfquintero.com" data-rel="external">dfquintero</a></h6>
         </div>
         <div data-role="content">
-            <br />
-            <center>
-                <img src="img/EcoMedallas.png" style="width:70%" />
-            </center>
-            <br />
-            <br />
-            <div class="ui-grid-b">
-                <div class="ui-block-a">
-                    <a href="#1">
-                        <img src="img/medallas/g3976.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-b">
-                    <a href="#2">
-                        <img src="img/medallas/g3980.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-c">
-                    <a href="#3">
-                        <img src="img/medallas/g3984.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-a">
-                    <a href="#4">
-                        <img src="img/medallas/g3988.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-b">
-                    <a href="#5">
-                        <img src="img/medallas/g3992.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-c">
-                    <a href="#6">
-                        <img src="img/medallas/g3996.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-a">
-                    <a href="#7">
-                        <img src="img/medallas/g4000.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-b">
-                    <a href="#8">
-                        <img src="img/medallas/g4004.png" style="width:100%" />
-                    </a>
-                </div>
-                <div class="ui-block-c">
-                    <a href="#9">
-                        <img src="img/medallas/g4008.png" style="width:100%" />
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div data-role="panel" id="menu2" style="background-image: url(img/Eco.png); background-repeat: no-repeat; background-position-y: top; background-position-x: center; background-size: contain">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <ul data-role="listview" class="ui-nodisc-icon ui-alt-icon" data-theme="a" style="opacity:0.70;">
-                <li data-role="list-divider"></li>
-                <li data-icon="power"><a href="#Consumo"><h1 style="text-align:center; opacity:1;">Consumo</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="star"><a href="#Medallas"><h1 style="text-align:center">Medallas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="info"><a href="#Tips"><h1 style="text-align:center">Tips</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="check"><a href="#Tareas"><h1 style="text-align:center">Tareas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="delete"><a href="#login"><h1 style="text-align:center; color:red">Cerrar</h1></a></li>
-                <li data-role="list-divider"></li>
-            </ul>
-        </div>
-    </div>
-    <div data-role="page" id="Tips">
-        <div data-role="header" data-theme="b">
-            <h1></h1>
-            <a class="ui-btn-left ui-btn ui-icon-bars ui-corner-all ui-btn-icon-notext ui-nodisc-icon" href="#menu3" style="background-color:transparent;" data-theme="a">Menu</a>
-        </div>
-        <div data-role="content">
-            <br />
-            <center>
-                <img src="img/EcoTips.png" style="width:70%" />
-            </center>
-            <br />
-            <br />
-            <a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../_assets/img/paris.jpg" alt="Paris, France" style="width:30%"></a>
-            <a href="#popupSydney" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../_assets/img/sydney.jpg" alt="Sydney, Australia" style="width:30%"></a>
-            <a href="#popupNYC" data-rel="popup" data-position-to="window" data-transition="fade"><img class="popphoto" src="../_assets/img/newyork.jpg" alt="New York, USA" style="width:30%"></a>
-            <div data-role="popup" id="popupParis" data-overlay-theme="b" data-theme="b" data-corners="false">
-                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../_assets/img/paris.jpg" style="max-height:512px;" alt="Paris, France">
-            </div>
-            <div data-role="popup" id="popupSydney" data-overlay-theme="b" data-theme="b" data-corners="false">
-                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../_assets/img/sydney.jpg" style="max-height:512px;" alt="Sydney, Australia">
-            </div>
-            <div data-role="popup" id="popupNYC" data-overlay-theme="b" data-theme="b" data-corners="false">
-                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img class="popphoto" src="../_assets/img/newyork.jpg" style="max-height:512px;" alt="New York, USA">
-            </div>
-        </div>
-        <div data-role="panel" id="menu3" style="background-image: url(img/Eco.png); background-repeat: no-repeat; background-position-y: top; background-position-x: center; background-size: contain">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <ul data-role="listview" class="ui-nodisc-icon ui-alt-icon" data-theme="a" style="opacity:0.70;">
-                <li data-role="list-divider"></li>
-                <li data-icon="power"><a href="#Consumo"><h1 style="text-align:center; opacity:1;">Consumo</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="star"><a href="#Medallas"><h1 style="text-align:center">Medallas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="info"><a href="#Tips"><h1 style="text-align:center">Tips</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="check"><a href="#Tareas"><h1 style="text-align:center">Tareas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="delete"><a href="#login"><h1 style="text-align:center; color:red">Cerrar</h1></a></li>
-                <li data-role="list-divider"></li>
-            </ul>
-        </div>
-    </div>
-    <div data-role="page" id="Tareas">
-        <div data-role="header" data-theme="b">
-            <h1></h1>
-            <a class="ui-btn-left ui-btn ui-icon-bars ui-corner-all ui-btn-icon-notext ui-nodisc-icon " href="#menu4" style="background-color:transparent;">Menu</a>
-        </div>
-        <div data-role="content">
-            <br />
-            <center>
-                <img src="img/EcoTareas.png" style="width:70%" />
-            </center>
-            <br />
+            <center><img src="img/EcoConsumos.png" style="width:80%;"/></center>            
             <br />
             <ul data-role="listview" data-inset="true">
-                <li>
-                    <a href="#1" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">
-                        <h2>Cambio Energetico</h2>
-                        <p><strong>Hay formas de cambiar el nivel de consumo de energia en donde vives</strong></p>
-                    </a>
+                <li data-role="list-divider" style="text-align:center">Mis Consumos</li>
+                <li>                    
+                    <img src="img/badges/adventurer.png" />
+                    <h1>Bombillos Ahorradores</h1>
+                    <p>Actualmente tienes 3 bombillos ahorradores</p>
                 </li>
                 <li>
-                    <a href="#2" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">
-                        <h2>Ahorra Energia </h2>
-                        <p><strong>Si no la nesecitas no la uses!</strong></p>
-
-                    </a>
+                    <img />
+                    <h1>Bombillos Incandescentes</h1>
+                    <p>Actualmente tienes 1 bombillos Incandescentes</p>
                 </li>
                 <li>
-                    <a href="#3" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">
-                        <h2>Modo Ahorrador</h2>
-                        <p><strong>otra forma...</strong></p>
-
-                    </a>
+                    <img />
+                    <h1>Lavadora</h1>
+                    <p>Usas tu Lavadora 4 veces a la semana</p>
                 </li>
                 <li>
-                    <a href="#4" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">
-                        <h2>Salva el Planeta, Salvate tú!</h2>
-                        <p><strong>recuerda que vivies aquí</strong></p>
-
-                    </a>
+                    <img />
+                    <h1>Televisor</h1>
+                    <p>Tu Televisor suele estar encendido 5 horas al dia</p>
+                </li>
+                <li>
+                    <img />
+                    <h1>Consola</h1>
+                    <p>Tu consola suele estar encendida 2.5 horas al dia</p>
+                </li>
+                <li>
+                    <img />
+                    <h1>PC Escritorio</h1>
+                    <p>Tu PC Escritorio suele estar encendido 8.7 horas al dia</p>
+                </li>
+                <li>
+                    <div class="ui-grid-solo">
+                        <button class="ui-btn ui-icon-plus" data-icon="plus">Añadir  +</button> 
+                    </div>                    
                 </li>
             </ul>
-
-            <div data-role="popup" id="1">
-                <h1 style="text-align:center;">Cambio Energetico</h1>
-                <p><h4>Hey!!! cambia las bombillas comunes por bombillas ahorradoras en una muy buena forma de hacer un cambio energetico</h4></p>
-                <p><h6>que cambies el tipo de bombillas hace que ahorres alrededor de 35% de energia</h6></p>
-                <center><a href="#" data-rel="back" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top">Aceptar</a></center>
-            </div>
-            <div data-role="popup" id="2">
-                <h1>Ahorra Energia</h1>
-                <p><h4>si en tu casa no nesecitas tener tantas bombillas prendidas, pues Apagalas!</h4></p>
-                <p><h6>cuando apagas una bombilla que esta siendo innecesaria el consumo de energia puede bajar entre un 10 o 15% de acuerdo al tiempo que acostumbraba a estar encendida</h6></p>
-                <center><a href="#" data-rel="back" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top">Aceptar</a></center>
-            </div>
-            <div data-role="popup" id="3">
-                <h1>Modo Ahorrador</h1>
-                <p><h4>hazte amigo de esta opcion :D la reduccion de energia es notoria  </h4></p>
-                <p><h6>esta opcion ayuda a que los costos de energia se vean reducidos</h6></p>
-                <center><a href="#" data-rel="back" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top">Aceptar</a></center>
-            </div>
-            <div data-role="popup" id="4">
-                <h1>Salva el mundo</h1>
-                <p><h4>Ayuda al medio ambiente... al final vives aqui.</h4></p>
-                <p><h6>siembra un arbol, el oxigeno es lo que te mantiene y los arboles son los que la elaboran</h6></p>
-                <center><a href="#" data-rel="back" class="ui-btn ui-btn-inline ui-icon-check ui-btn-icon-top">Aceptar</a></center>
-            </div>
         </div>
-        <div data-role="panel" id="menu4" style="background-image: url(img/Eco.png); background-repeat: no-repeat; background-position-y: top; background-position-x: center; background-size: contain">
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-            <ul data-role="listview" class="ui-nodisc-icon ui-alt-icon" data-theme="a" style="opacity:0.70;">
-                <li data-role="list-divider"></li>
-                <li data-icon="power"><a href="#Consumo"><h1 style="text-align:center; opacity:1;">Consumo</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="star"><a href="#Medallas"><h1 style="text-align:center">Medallas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="info"><a href="#Tips"><h1 style="text-align:center">Tips</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="check"><a href="#Tareas"><h1 style="text-align:center">Tareas</h1></a></li>
-                <li data-role="list-divider"></li>
-                <li data-icon="delete"><a href="#login"><h1 style="text-align:center; color:red">Cerrar</h1></a></li>
-                <li data-role="list-divider"></li>
-            </ul>
-        </div>    
     </div>
-
+    <div data-role="page" id="tips" style="background-image: url(img/30.png); background-repeat: no-repeat; background-position: bottom; background-size: cover; background-color: #c8dd83; ">
+        <div data-role=" header" style="overflow:hidden; opacity:0.9; border:hidden" data-position="fixed">
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#badges" data-icon="star" data-transition="flow" class="ui-alt-icon"></a></li>
+                <li><a href="#consumos" data-icon="bars" data-transition="flow" class="ui-alt-icon"></a></li>
+                <li><a href="#tips" data-icon="grid" data-transition="flow" class="ui-btn-active" style="background-color:gold"></a></li>
+                <li><a href="#exit" data-icon="delete" data-rel="popup" data-transition="slidedown" data-position-to="window" style="background-color:red"></a></li>
+            </ul>
+        </div>
+    </div>
+        <div data-role="popup" id="exit" class="ui-content" data-theme="a">
+            <h4 style="text-align:center">¿Esta Seguro de que desea Salir?</h4>
+            <center>
+                <a href="#login" class="ui-btn ui-mini ui-btn-inline" style="width:30%">Salir</a>
+                <a href="#" class="ui-btn ui-mini ui-btn-inline" data-rel="back" style="width:30%">Cancelar</a>
+            </center>
+            <h6 style="text-align:right">Developed by: <a href="http://www.dfquintero.com" data-rel="external">dfquintero</a></h6>
+        </div>
+        <div data-role="content">
+            <center><img src="img/EcoTips.png" style="width:70%" /></center>
+            <div class="ui-grid-solo">
+                <div class="ui-block-a" style="border: groove">
+                    <center>
+                        <img src="img/ImageProxy.mvc.jpg" style="width:80%" />
+                        <a class="ui-btn" href="#popshare" data-rel="popup">Compartir</a>
+                    </center>
+                </div>
+                <div class="ui-block-a" style="border: groove">
+                    <center>
+                        <img src="img/ImageProxy.mvqc.jpg" style="width:8   0%" />
+                        <a class="ui-btn" href="#popshare" data-rel="popup">Compartir</a>
+                    </center>
+                </div>
+            </div>            
+        </div>
+        <div data-role="popshare" id="b5" class="ui-content ui" data-theme="a">
+            <h5>Social Sharing Plugin</h5>
+        </div>
+    </div>
 </body>
 </html>
